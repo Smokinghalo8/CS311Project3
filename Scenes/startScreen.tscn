@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://6u82x8w7okdw"]
+
+[ext_resource type="Script" path="res://Scripts/button.gd" id="1_502k7"]
+[ext_resource type="AudioStream" uid="uid://dtst56b6lgd4o" path="res://miscAssets/Alert.wav" id="2_dpkf7"]
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1166.0
+offset_bottom = 668.0
+
+[node name="Label" type="Label" parent="Control"]
+z_index = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 229.0
+offset_bottom = 75.0
+theme_override_constants/outline_size = 6
+text = "Hacker Simulator
+
+Ethan Buckner"
+
+[node name="Button" type="Button" parent="Control"]
+top_level = true
+z_index = 1
+layout_mode = 0
+offset_left = 32.0
+offset_top = 144.0
+offset_right = 123.0
+offset_bottom = 181.0
+scale = Vector2(0.805165, 1)
+text = "Start!"
+script = ExtResource("1_502k7")
+
+[node name="Camera2D" type="Camera2D" parent="Control"]
+position = Vector2(284, 165)
+zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("2_dpkf7")
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
