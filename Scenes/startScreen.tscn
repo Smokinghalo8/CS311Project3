@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://6u82x8w7okdw"]
+[gd_scene load_steps=4 format=3 uid="uid://6u82x8w7okdw"]
 
 [ext_resource type="Script" path="res://Scripts/button.gd" id="1_502k7"]
+[ext_resource type="Texture2D" uid="uid://dk8mmi7wvmgwv" path="res://Sprites/codeing_game_intro.png" id="1_krhod"]
 [ext_resource type="AudioStream" uid="uid://dtst56b6lgd4o" path="res://miscAssets/Alert.wav" id="2_dpkf7"]
 
 [node name="Node" type="Node"]
@@ -13,10 +14,14 @@ offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_right = 1166.0
-offset_bottom = 668.0
+offset_left = -19.0
+offset_top = -7.0
+offset_right = 664.0
+offset_bottom = 377.0
+texture = ExtResource("1_krhod")
 
 [node name="Label" type="Label" parent="Control"]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 24.0
@@ -32,10 +37,10 @@ Ethan Buckner"
 top_level = true
 z_index = 1
 layout_mode = 0
-offset_left = 32.0
-offset_top = 144.0
-offset_right = 123.0
-offset_bottom = 181.0
+offset_left = 313.0
+offset_top = 215.0
+offset_right = 404.0
+offset_bottom = 252.0
 scale = Vector2(0.805165, 1)
 text = "Start!"
 script = ExtResource("1_502k7")
